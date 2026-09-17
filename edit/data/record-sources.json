@@ -1,0 +1,42 @@
+{
+  "format": "orinoco-static-record-sources",
+  "records": [
+    {
+      "path": "site-specific/metadata/records/site-root.yaml",
+      "pid": "xyzrins:.",
+      "rdf_turtle": "<https://concepts.datalad.org/s/demo-research-information/ns/.> <http://purl.org/dc/terms/description> \"Disposable fixtures for coordinated metadata proposals.\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/.> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZProject> .\n<https://concepts.datalad.org/s/demo-research-information/ns/.> <http://www.w3.org/2004/02/skos/core#prefLabel> \"Orinoco Lite submodule demo\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/.> <https://concepts.datalad.org/s/things/v2/title> \"Orinoco Lite submodule demo\" .\n",
+      "schema_type": "xyzri:XYZProject",
+      "sha256": "430854f9a5f8381205fc110a41e204c3f21bead32fd166d05eac2f305b2ca540"
+    },
+    {
+      "path": "site-specific/metadata/records/starter-person.yaml",
+      "pid": "xyzrins:persons/starter-person",
+      "rdf_turtle": "<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <http://purl.org/dc/terms/description> \"Replace this example person with reviewed site metadata.\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZPerson> .\n<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <http://www.w3.org/2004/02/skos/core#prefLabel> \"Starter Person\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <https://concepts.datalad.org/s/things/v2/family_name> \"Person\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <https://concepts.datalad.org/s/things/v2/formatted_name> \"Starter Person\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <https://concepts.datalad.org/s/things/v2/given_name> \"Starter\" .\n",
+      "schema_type": "xyzri:XYZPerson",
+      "sha256": "bc35acfea76323877916602cbdf12f0e2510dab3007317ed26b2afa3cd327b0c"
+    },
+    {
+      "path": "site-specific/metadata/records/starter-project.yaml",
+      "pid": "xyzrins:projects/starter-project",
+      "rdf_turtle": "<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <http://purl.org/dc/terms/description> \"Replace this example project with reviewed site metadata.\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZProject> .\n<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <http://www.w3.org/2004/02/skos/core#prefLabel> \"Starter Project\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <https://concepts.datalad.org/s/things/v2/associated_with> _:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 .\n<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <https://concepts.datalad.org/s/things/v2/part_of> <https://concepts.datalad.org/s/demo-research-information/ns/.> .\n<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <https://concepts.datalad.org/s/things/v2/title> \"Starter Project\" .\n_:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> .\n_:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/things/v2/Association> .\n_:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 <https://concepts.datalad.org/s/things/v2/roles> <http://id.loc.gov/vocabulary/relators/led> .\n",
+      "schema_type": "xyzri:XYZProject",
+      "sha256": "0ac96d4803ec3e3e267c25c0596054b3998fbd95f2db16e687c36c09faa5ce67"
+    },
+    {
+      "path": "site-specific/metadata/records/starter-publication.yaml",
+      "pid": "xyzrins:publications/starter-publication",
+      "rdf_turtle": "<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://purl.org/dc/terms/description> \"Replace this example publication with reviewed site metadata.\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://purl.org/dc/terms/type> <http://purl.org/ontology/bibo/Document> .\n<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZPublication> .\n<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://www.w3.org/2004/02/skos/core#prefLabel> \"Starter Publication\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <https://concepts.datalad.org/s/things/v2/attributed_to> _:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 .\n<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <https://concepts.datalad.org/s/things/v2/title> \"Starter Publication\" .\n_:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> .\n_:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/things/v2/Attribution> .\n_:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 <https://concepts.datalad.org/s/things/v2/roles> <http://id.loc.gov/vocabulary/relators/aut> .\n",
+      "schema_type": "xyzri:XYZPublication",
+      "sha256": "bfcc924efa22b0f5f118f66b05b6ef2a322b1f7bb29206175d549bb1722413b4"
+    },
+    {
+      "path": "site-specific/metadata/records/adapter-fixture-agent.yaml",
+      "pid": "xyzrins:source-adapters/issue-163-fixture/v1",
+      "rdf_turtle": "<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <http://purl.org/dc/terms/description> \"Deterministic test adapter for the authorized accept, reject, and defer exercise.\" .\n<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <http://purl.org/dc/terms/type> <http://purl.obolibrary.org/obo/IAO_0000010> .\n<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZInstrument> .\n<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <https://concepts.datalad.org/s/things/v2/name> \"Issue 163 disposable adapter fixture\" .\n",
+      "schema_type": "xyzri:XYZInstrument",
+      "sha256": "dbb297beed489e9fedee84cc982829e2945f4772ccd8c023f585ad61e40dee34"
+    }
+  ],
+  "source_commit": "a72746eaecbe175b6f5118fac4c0cd890410beb4",
+  "version": 2
+}

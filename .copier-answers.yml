@@ -1,8 +1,0 @@
-_src_path: https://github.com/ORINOCO-Lite/orinoco-lite-template.git
-project_slug: orinoco-lite-submodule-demo
-project_name: Orinoco Lite submodule demo
-site_description: Disposable fixtures for coordinated metadata proposals.
-site_base_url: https://leej3.github.io/orinoco-lite-submodule-demo/
-pr_previews: netlify
-_commit: 5005cc79762709a4fd5a0bb4e100f5ac9f426cb5
-include_site_specific: true

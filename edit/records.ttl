@@ -1,0 +1,32 @@
+<https://concepts.datalad.org/s/demo-research-information/ns/.> <http://purl.org/dc/terms/description> "Disposable fixtures for coordinated metadata proposals." .
+<https://concepts.datalad.org/s/demo-research-information/ns/.> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZProject> .
+<https://concepts.datalad.org/s/demo-research-information/ns/.> <http://www.w3.org/2004/02/skos/core#prefLabel> "Orinoco Lite submodule demo" .
+<https://concepts.datalad.org/s/demo-research-information/ns/.> <https://concepts.datalad.org/s/things/v2/title> "Orinoco Lite submodule demo" .
+<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <http://purl.org/dc/terms/description> "Replace this example person with reviewed site metadata." .
+<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZPerson> .
+<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <http://www.w3.org/2004/02/skos/core#prefLabel> "Starter Person" .
+<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <https://concepts.datalad.org/s/things/v2/family_name> "Person" .
+<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <https://concepts.datalad.org/s/things/v2/formatted_name> "Starter Person" .
+<https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> <https://concepts.datalad.org/s/things/v2/given_name> "Starter" .
+<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <http://purl.org/dc/terms/description> "Replace this example project with reviewed site metadata." .
+<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZProject> .
+<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <http://www.w3.org/2004/02/skos/core#prefLabel> "Starter Project" .
+<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <https://concepts.datalad.org/s/things/v2/associated_with> _:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 .
+<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <https://concepts.datalad.org/s/things/v2/part_of> <https://concepts.datalad.org/s/demo-research-information/ns/.> .
+<https://concepts.datalad.org/s/demo-research-information/ns/projects/starter-project> <https://concepts.datalad.org/s/things/v2/title> "Starter Project" .
+<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://purl.org/dc/terms/description> "Replace this example publication with reviewed site metadata." .
+<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://purl.org/dc/terms/type> <http://purl.org/ontology/bibo/Document> .
+<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZPublication> .
+<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <http://www.w3.org/2004/02/skos/core#prefLabel> "Starter Publication" .
+<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <https://concepts.datalad.org/s/things/v2/attributed_to> _:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 .
+<https://concepts.datalad.org/s/demo-research-information/ns/publications/starter-publication> <https://concepts.datalad.org/s/things/v2/title> "Starter Publication" .
+<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <http://purl.org/dc/terms/description> "Deterministic test adapter for the authorized accept, reject, and defer exercise." .
+<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <http://purl.org/dc/terms/type> <http://purl.obolibrary.org/obo/IAO_0000010> .
+<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/demo-research-information/unreleased/XYZInstrument> .
+<https://concepts.datalad.org/s/demo-research-information/ns/source-adapters/issue-163-fixture/v1> <https://concepts.datalad.org/s/things/v2/name> "Issue 163 disposable adapter fixture" .
+_:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> .
+_:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/things/v2/Attribution> .
+_:rc2bb24094eab05062f8c60e0_ncf390f249c95472fbc19bc40a79f57e3b1 <https://concepts.datalad.org/s/things/v2/roles> <http://id.loc.gov/vocabulary/relators/aut> .
+_:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://concepts.datalad.org/s/demo-research-information/ns/persons/starter-person> .
+_:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/things/v2/Association> .
+_:rfffb5c1cdc7b5065b857e1af_ne010c844685d4f0487a3854a942ba711b1 <https://concepts.datalad.org/s/things/v2/roles> <http://id.loc.gov/vocabulary/relators/led> .
