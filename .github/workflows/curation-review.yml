@@ -67,9 +67,11 @@ jobs:
         run: pixi run python -m orinoco_lite.curation_actions checkout
 
       - name: Validate and record the composed adapter result
+        id: record
         run: pixi run python -m orinoco_lite.curation_actions record
 
       - name: Obtain metadata write access after validation
+        if: steps.record.outputs.has_changes == 'true'
         id: write
         env:
           PROPOSAL_NUMBER: ${{ steps.proposal.outputs.number }}
@@ -78,6 +80,7 @@ jobs:
         run: pixi run python -m orinoco_lite.workflow_access --curation --write
 
       - name: Publish both drafts with exact-head leases
+        if: steps.record.outputs.has_changes == 'true'
         id: publish
         env:
           GH_TOKEN: ${{ github.token }}
@@ -86,11 +89,11 @@ jobs:
         run: pixi run python -m orinoco_lite.curation_actions publish
 
       - name: Render proposal presentation
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' && steps.record.outputs.has_changes == 'true'
         run: pixi run python -m orinoco_lite.curation_actions bundle
 
       - name: Publish expiring review presentation
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' && steps.record.outputs.has_changes == 'true'
         id: artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
@@ -100,6 +103,7 @@ jobs:
           if-no-files-found: error
 
       - name: Report review link or completed decisions
+        if: steps.record.outputs.has_changes == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ARTIFACT_ID: ${{ steps.artifact.outputs.artifact-id }}
