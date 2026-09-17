@@ -1,3 +1,4 @@
 [submodule "site-specific"]
 	path = site-specific
 	url = https://github.com/leej3/orinoco-lite-submodule-demo-metadata.git
+	datalad-id = f66b8fbd-6dce-450f-b82d-7468e79e042e
