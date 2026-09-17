@@ -24,3 +24,5 @@ See [getting started](docs/getting-started.md), [ownership](docs/ownership.md), 
 The selected package revision is the single authority for the upstream website and theme pins.
 The downstream selects its package through Pixi, its template through `.copier-answers.yml`, and actions through pinned workflow references.
 Resources and specifications required to build or operate Orinoco Lite are internal to the selected package commit.
+
+Disposable preview fixture for coordinated metadata editing.
