@@ -55,3 +55,6 @@ weight = 40
 color_scheme = "fire"
 default_appearance = "light"
 header_layout = "hybrid"
+
+[tool.orinoco.operations]
+template_updates = true
