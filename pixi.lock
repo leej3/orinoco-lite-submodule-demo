@@ -73,9 +73,12 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2026c-h151e31d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-4.1.0-pyhcf101f3_0.conda
-      - pypi: git+https://github.com/ORINOCO-Lite/dump-things-pyclient.git?rev=1e79391195ad4412286344189dc5f81a06accb90#1e79391195ad4412286344189dc5f81a06accb90
-      - pypi: git+https://github.com/ORINOCO-Lite/orinoco-lite-dev.git?rev=1102e5c4518cbd2900f9c9c25e3dc9c0b32065ce#1102e5c4518cbd2900f9c9c25e3dc9c0b32065ce
-      - pypi: git+https://github.com/ORINOCO-Lite/things-enrichment-tools.git?rev=9f036a4cdfb53f87346152f9cd4620aaef38bce2#9f036a4cdfb53f87346152f9cd4620aaef38bce2
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fdump-things-pyclient&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fdump-things-service&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fquery-things&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fthings-enrichment-tools&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fthings-schemas&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
       - pypi: https://files.pythonhosted.org/packages/00/cc/7fbd75d3362e939eb98bcf9bd22f3f7df8c237a85148899ed3d38e5614e5/json_flattener-0.1.9-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/02/10/5da547df7a391dcde17f59520a231527b8571e6f46fc8efb02ccb370ab12/docutils-0.22.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl
@@ -136,7 +139,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/5f/6f/e62b4dfc7ad6518e7eff2516f680d02a0f6eb62c0c212e152ca708a0085e/uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/5f/97/d8a785d2c7131c731c90cb0e65af9400081af4380bea4ec04868dc21aa92/rdflib_shim-1.0.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/61/50/cb792aaf25a8f42f5738dafb3030a1243d484ab366ff321ebcd45dfcfc12/patool-4.0.5-py2.py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/62/cc/d1c4f05eed0dd60d8282f6b5bcd2a761ad587796f797a0dc1ae5f71323b5/dump_things_service-6.3.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/63/1d/600b0dd24aa61f03d35293a2e9a4695add1e94c03d8701436fb52d5daf4f/linkml_runtime-1.11.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/65/d4/f7407c3d15d5ac779c3dd34fbbc6ea2090f77bd7dd12f207ccf881551208/rfc3987-1.3.8-py2.py3-none-any.whl
@@ -151,6 +153,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/71/57/38c47753c67ad67f76ba04ea673c9b77431a19e7b2601937e6872a99e841/jsonasobj-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/f7/b1884cb3188ab181fc81fa00c266699dab600f927a964df02ec3d5d1916a/sphinx-9.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/75/45/54bb2d8d4138964a94bef6e9afe48b0be4705ba66ac442ae7d8a8dc4ffef/click_option_group-0.5.9-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/77/f5/21d2de20e8b8b0408f0681956ca2c69f1320a3848ac50e6e7f39c6159675/babel-2.18.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/78/ac/5c5b959999b6f09c3026b5dfe171575bc3121c5236ce74f495096f25b203/greenlet-3.5.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/7b/24/61844afbf38acf419e01ca2639f7bd079584523d34471acbc4152ee991c5/hbreader-0.9.1-py3-none-any.whl
@@ -166,9 +169,11 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/86/72/b03ca1560615933f079ba7d291d3532ed95c2a3205911fe71d192654acaa/shexjsg-0.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/86/96/7e9aba6fabce3cb05f320abeef5b81efd5134823ae85d1a517872cb83cbc/fastapi_cloud_cli-0.23.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/89/b2/2b2153173f2819e3d7d1949918612981bc6bd895b75ffa392d63d115f327/prefixmaps-0.2.6-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/90/a0/eed0f352481cfa22bdbf3e0cf4cab609d878592e140a864e03b5e51a0289/git_annex-10.20250721-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/91/4c/e0ce1ef95d4000ebc1c11801f9b944fa5910ecc15b5e351865763d8657f8/graphviz-0.21-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/91/b6/0d74517d0b33dfe372b47b2ef5781a2231e891f8fe8edea74a447a7f7380/annexremote-1.6.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/93/3d/fb547ed2ac318132517e001b74b09d1f17d2c2c681cad1e32a8b84139867/python_gitlab-8.5.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/98/72/9f2e48bb184dfed90bb01c1933470e80e1b1039114bf045da02b63aaff9f/pyoxigraph-0.5.13-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/9e/6a/a83720e953b1682d2d109d3c2dbb0bc9bf28cc1cbc205be4ef4be5da709d/jsonpointer-3.1.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a4/d1/9725ec62421dcfe430d874cba9f82c0288baee0c4b7dd8aa8dcca2b0394e/fastapi_pagination-0.15.16-py3-none-any.whl
@@ -269,9 +274,12 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/readline-8.3-h46df422_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/tk-8.6.13-hd3d0363_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/yaml-0.2.5-h925e9cb_3.conda
-      - pypi: git+https://github.com/ORINOCO-Lite/dump-things-pyclient.git?rev=1e79391195ad4412286344189dc5f81a06accb90#1e79391195ad4412286344189dc5f81a06accb90
-      - pypi: git+https://github.com/ORINOCO-Lite/orinoco-lite-dev.git?rev=1102e5c4518cbd2900f9c9c25e3dc9c0b32065ce#1102e5c4518cbd2900f9c9c25e3dc9c0b32065ce
-      - pypi: git+https://github.com/ORINOCO-Lite/things-enrichment-tools.git?rev=9f036a4cdfb53f87346152f9cd4620aaef38bce2#9f036a4cdfb53f87346152f9cd4620aaef38bce2
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fdump-things-pyclient&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fdump-things-service&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fquery-things&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fthings-enrichment-tools&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+      - pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fthings-schemas&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
       - pypi: https://files.pythonhosted.org/packages/00/cc/7fbd75d3362e939eb98bcf9bd22f3f7df8c237a85148899ed3d38e5614e5/json_flattener-0.1.9-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/02/10/5da547df7a391dcde17f59520a231527b8571e6f46fc8efb02ccb370ab12/docutils-0.22.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl
@@ -330,7 +338,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/5f/8f/6af2ea19065c91d8b0ea3516fdfc8c0d349f407e8e9fbf4e5a17360de8ad/watchfiles-1.2.0-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/5f/97/d8a785d2c7131c731c90cb0e65af9400081af4380bea4ec04868dc21aa92/rdflib_shim-1.0.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/61/50/cb792aaf25a8f42f5738dafb3030a1243d484ab366ff321ebcd45dfcfc12/patool-4.0.5-py2.py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/62/cc/d1c4f05eed0dd60d8282f6b5bcd2a761ad587796f797a0dc1ae5f71323b5/dump_things_service-6.3.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/63/1d/600b0dd24aa61f03d35293a2e9a4695add1e94c03d8701436fb52d5daf4f/linkml_runtime-1.11.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/65/d4/f7407c3d15d5ac779c3dd34fbbc6ea2090f77bd7dd12f207ccf881551208/rfc3987-1.3.8-py2.py3-none-any.whl
@@ -339,10 +346,12 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/6d/3c/045ea64ea5a550870dd8ab60b2242870328d53f17d2be593b4f9f3121474/charset_normalizer-3.5.0-cp312-cp312-macosx_10_13_universal2.whl
       - pypi: https://files.pythonhosted.org/packages/6d/94/b7123440be1490730cbef0b2e01b9d47c6d4a1b206c87289a1ca9a6cdebb/datalad_core-0.3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/55/51b92daaf6defb57f4dc56bdcce985400f75c6984a03ca5e78ccac717028/wrapt-2.3.0-cp312-cp312-macosx_11_0_arm64.whl
+      - pypi: https://files.pythonhosted.org/packages/6e/cf/b8b0fb626ddb4e2d08d3375e2e2c1e1286769f4b64dbdd90680cc4bc7d36/pyoxigraph-0.5.13-cp39-abi3-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/6f/c5/7c16e99869e1f422629092cfd23e3b58e461988c3f9c36fd3624bb4142e6/parse-1.22.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/71/57/38c47753c67ad67f76ba04ea673c9b77431a19e7b2601937e6872a99e841/jsonasobj-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/73/f7/b1884cb3188ab181fc81fa00c266699dab600f927a964df02ec3d5d1916a/sphinx-9.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/75/45/54bb2d8d4138964a94bef6e9afe48b0be4705ba66ac442ae7d8a8dc4ffef/click_option_group-0.5.9-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/77/f5/21d2de20e8b8b0408f0681956ca2c69f1320a3848ac50e6e7f39c6159675/babel-2.18.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/24/61844afbf38acf419e01ca2639f7bd079584523d34471acbc4152ee991c5/hbreader-0.9.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/44/4e421b96b67b2daff264473f7465db72fbdf36a07e05494f50300cc7b0c6/rfc3339_validator-0.1.4-py2.py3-none-any.whl
@@ -367,6 +376,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a5/42/cc4feea2945cb3051038f090c9b36bd5b8a9d7f5a894a506a8983e33fd1c/httptools-0.8.0-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/a9/65/1caac9d4cd32e8433908683446eebc953e82d22b03d10d41a5f0fefe991b/multidict-6.7.1-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/b0/aa/0b7365d30fed43e7a3449aba1fe20a0a7174d9cf13e282af4e69ac825441/humanize-4.16.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b1/de/4ed5b844db176182ae27840b5bb87eeb8944169219a2a4e81e7ca91f1a26/git_annex-10.20260901.post1-py3-none-macosx_14_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b5/51/b2b91aec091e86bc961e5164f00207d89f133cc82b5ddad541d2132ea819/rich_click-1.9.9-py3-none-any.whl
@@ -1438,7 +1448,30 @@ packages:
     - yaml >=0.2.5,<0.3.0a0
   size: 83386
   timestamp: 1753484079473
-- pypi: git+https://github.com/ORINOCO-Lite/dump-things-pyclient.git?rev=1e79391195ad4412286344189dc5f81a06accb90#1e79391195ad4412286344189dc5f81a06accb90
+- pypi: git+https://github.com/leej3/orinoco-lite-dev.git?rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+  name: orinoco-lite
+  version: 0.3.0+14.gf4f8f5c
+  requires_dist:
+  - datalad
+  - git-annex
+  - copier
+  - click-option-group
+  - dump-things-pyclient @ git+https://github.com/leej3/orinoco-lite-dev.git@f4f8f5c91b5c2475569b307d862d3e6ed67519b0#subdirectory=submodules/dump-things-pyclient
+  - dump-things-service @ git+https://github.com/leej3/orinoco-lite-dev.git@f4f8f5c91b5c2475569b307d862d3e6ed67519b0#subdirectory=submodules/dump-things-service
+  - things-enrichment-tools @ git+https://github.com/leej3/orinoco-lite-dev.git@f4f8f5c91b5c2475569b307d862d3e6ed67519b0#subdirectory=submodules/things-enrichment-tools
+  - query-things @ git+https://github.com/leej3/orinoco-lite-dev.git@f4f8f5c91b5c2475569b307d862d3e6ed67519b0#subdirectory=submodules/query-things
+  - datalad-concepts @ git+https://github.com/leej3/orinoco-lite-dev.git@f4f8f5c91b5c2475569b307d862d3e6ed67519b0#subdirectory=submodules/things-schemas
+  - jinja2
+  - linkml<1.12
+  - linkml-runtime<1.12
+  - packaging
+  - pydantic
+  - pyoxigraph
+  - pyyaml
+  - tomlkit
+  - rdflib
+  requires_python: '>=3.12'
+- pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fdump-things-pyclient&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
   name: dump-things-pyclient
   version: 0.3.0
   requires_dist:
@@ -1451,26 +1484,50 @@ packages:
   - dump-things-service>=6.2.2 ; extra == 'tests'
   - pytest>=9.0.1 ; extra == 'tests'
   requires_python: '>=3.11'
-- pypi: git+https://github.com/ORINOCO-Lite/orinoco-lite-dev.git?rev=1102e5c4518cbd2900f9c9c25e3dc9c0b32065ce#1102e5c4518cbd2900f9c9c25e3dc9c0b32065ce
-  name: orinoco-lite
-  version: 0.3.0rc9+20.g1102e5c
+- pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fdump-things-service&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+  name: dump-things-service
+  version: 6.3.6
   requires_dist:
-  - dump-things-pyclient @ git+https://github.com/ORINOCO-Lite/dump-things-pyclient.git@1e79391195ad4412286344189dc5f81a06accb90
-  - dump-things-service==6.3.6
-  - jinja2==3.1.6
-  - linkml==1.11.1
-  - linkml-runtime==1.11.1
-  - packaging==26.3
-  - pydantic==2.13.4
-  - pyyaml==6.0.2
-  - tomlkit>=0.13,<1
-  - rdflib==7.6.0
-  - things-enrichment-tools @ git+https://github.com/ORINOCO-Lite/things-enrichment-tools.git@9f036a4cdfb53f87346152f9cd4620aaef38bce2
-  requires_python: '>=3.12'
-- pypi: git+https://github.com/ORINOCO-Lite/things-enrichment-tools.git?rev=9f036a4cdfb53f87346152f9cd4620aaef38bce2#9f036a4cdfb53f87346152f9cd4620aaef38bce2
+  - aiohttp
+  - click
+  - datalad-core
+  - fastapi-pagination>=0.15.15
+  - fastapi[standard]>=0.138.0
+  - fsspec
+  - linkml>=1.10.0
+  - pydantic
+  - pyyaml
+  - rdflib
+  - requests
+  - sqlalchemy
+  - uvicorn
+  - myst-parser ; extra == 'docs'
+  - pytest ; extra == 'docs'
+  - sphinx ; extra == 'docs'
+  - sphinx-autodoc-typehints ; extra == 'docs'
+  - sphinx-rtd-theme ; extra == 'docs'
+  requires_python: '>=3.11'
+- pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fquery-things&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+  name: query-things
+  version: 0.1.dev137+g8efe2c03e
+  requires_dist:
+  - click
+  - click-option-group
+  - dump-things-pyclient
+  - jinja2
+  - pyyaml
+  requires_python: '>=3.11'
+- pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fthings-enrichment-tools&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
   name: things-enrichment-tools
   version: 0.1.dev72+g9f036a4cd
   requires_python: '>=3.12'
+- pypi: git+https://github.com/leej3/orinoco-lite-dev.git?subdirectory=submodules%2Fthings-schemas&rev=f4f8f5c91b5c2475569b307d862d3e6ed67519b0#f4f8f5c91b5c2475569b307d862d3e6ed67519b0
+  name: datalad-concepts
+  version: 0.0.1
+  requires_dist:
+  - linkml>=1.11
+  - dump-things-service
+  requires_python: '>=3.8'
 - pypi: https://files.pythonhosted.org/packages/00/cc/7fbd75d3362e939eb98bcf9bd22f3f7df8c237a85148899ed3d38e5614e5/json_flattener-0.1.9-py3-none-any.whl
   name: json-flattener
   version: 0.1.9
@@ -2242,30 +2299,6 @@ packages:
   requires_dist:
   - argcomplete>=3.6.2 ; extra == 'argcompletion'
   requires_python: '>=3.11'
-- pypi: https://files.pythonhosted.org/packages/62/cc/d1c4f05eed0dd60d8282f6b5bcd2a761ad587796f797a0dc1ae5f71323b5/dump_things_service-6.3.6-py3-none-any.whl
-  name: dump-things-service
-  version: 6.3.6
-  sha256: 3ac8712ff5a8fcc70e4ead80c3c883681952324e4b1529281ec85d86726a74dc
-  requires_dist:
-  - aiohttp
-  - click
-  - datalad-core
-  - fastapi-pagination>=0.15.15
-  - fastapi[standard]>=0.138.0
-  - fsspec
-  - linkml>=1.10.0
-  - pydantic
-  - pyyaml
-  - rdflib
-  - requests
-  - sqlalchemy
-  - uvicorn
-  - myst-parser ; extra == 'docs'
-  - pytest ; extra == 'docs'
-  - sphinx ; extra == 'docs'
-  - sphinx-autodoc-typehints ; extra == 'docs'
-  - sphinx-rtd-theme ; extra == 'docs'
-  requires_python: '>=3.11'
 - pypi: https://files.pythonhosted.org/packages/63/1d/600b0dd24aa61f03d35293a2e9a4695add1e94c03d8701436fb52d5daf4f/linkml_runtime-1.11.1-py3-none-any.whl
   name: linkml-runtime
   version: 1.11.1
@@ -2380,6 +2413,11 @@ packages:
   - pytest ; extra == 'dev'
   - setuptools ; extra == 'dev'
   requires_python: '>=3.9'
+- pypi: https://files.pythonhosted.org/packages/6e/cf/b8b0fb626ddb4e2d08d3375e2e2c1e1286769f4b64dbdd90680cc4bc7d36/pyoxigraph-0.5.13-cp39-abi3-macosx_11_0_arm64.whl
+  name: pyoxigraph
+  version: 0.5.13
+  sha256: ebf818fc940b44d30f92a4e84afffbac0284eb57567a8a06fe076a482c605132
+  requires_python: '>=3.9'
 - pypi: https://files.pythonhosted.org/packages/6f/c5/7c16e99869e1f422629092cfd23e3b58e461988c3f9c36fd3624bb4142e6/parse-1.22.1-py2.py3-none-any.whl
   name: parse
   version: 1.22.1
@@ -2416,6 +2454,21 @@ packages:
   - packaging>=23.0
   - colorama>=0.4.6 ; sys_platform == 'win32'
   requires_python: '>=3.12'
+- pypi: https://files.pythonhosted.org/packages/75/45/54bb2d8d4138964a94bef6e9afe48b0be4705ba66ac442ae7d8a8dc4ffef/click_option_group-0.5.9-py3-none-any.whl
+  name: click-option-group
+  version: 0.5.9
+  sha256: ad2599248bd373e2e19bec5407967c3eec1d0d4fc4a5e77b08a0481e75991080
+  requires_dist:
+  - click>=7.0
+  - pre-commit ; extra == 'dev'
+  - pytest ; extra == 'dev'
+  - m2r2 ; extra == 'docs'
+  - pallets-sphinx-themes ; extra == 'docs'
+  - sphinx ; extra == 'docs'
+  - pytest ; extra == 'test'
+  - pytest ; extra == 'test-cov'
+  - pytest-cov ; extra == 'test-cov'
+  requires_python: '>=3.7'
 - pypi: https://files.pythonhosted.org/packages/77/f5/21d2de20e8b8b0408f0681956ca2c69f1320a3848ac50e6e7f39c6159675/babel-2.18.0-py3-none-any.whl
   name: babel
   version: 2.18.0
@@ -2593,6 +2646,11 @@ packages:
   - curies>=0.5.3
   - pyyaml>=5.3.1
   requires_python: '>=3.8,<4.0'
+- pypi: https://files.pythonhosted.org/packages/90/a0/eed0f352481cfa22bdbf3e0cf4cab609d878592e140a864e03b5e51a0289/git_annex-10.20250721-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+  name: git-annex
+  version: '10.20250721'
+  sha256: 0086e6fc51e3183747fd1aea6f28e2771d158dda0fcb942264e41a280298bdee
+  requires_python: '>=3.9'
 - pypi: https://files.pythonhosted.org/packages/91/4c/e0ce1ef95d4000ebc1c11801f9b944fa5910ecc15b5e351865763d8657f8/graphviz-0.21-py3-none-any.whl
   name: graphviz
   version: '0.21'
@@ -2632,6 +2690,11 @@ packages:
   - pyyaml>=6.0.1 ; extra == 'yaml'
   - gql[httpx]>=3.5.0,<5 ; extra == 'graphql'
   requires_python: '>=3.10.0'
+- pypi: https://files.pythonhosted.org/packages/98/72/9f2e48bb184dfed90bb01c1933470e80e1b1039114bf045da02b63aaff9f/pyoxigraph-0.5.13-cp312-cp312-manylinux_2_28_x86_64.whl
+  name: pyoxigraph
+  version: 0.5.13
+  sha256: afb4d4ac972c17da77b5f5f17fd1b20f3a95d6a56c7dc6815bf701d1e4a0d255
+  requires_python: '>=3.9'
 - pypi: https://files.pythonhosted.org/packages/9e/6a/a83720e953b1682d2d109d3c2dbb0bc9bf28cc1cbc205be4ef4be5da709d/jsonpointer-3.1.1-py3-none-any.whl
   name: jsonpointer
   version: 3.1.1
@@ -2726,6 +2789,11 @@ packages:
   requires_dist:
   - pycparser ; implementation_name != 'PyPy'
   requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/b1/de/4ed5b844db176182ae27840b5bb87eeb8944169219a2a4e81e7ca91f1a26/git_annex-10.20260901.post1-py3-none-macosx_14_0_arm64.whl
+  name: git-annex
+  version: 10.20260901.post1
+  sha256: ff5e0b0e4948296b61dadd81801bb65f39027c22ae786a5a2cb2b437a83c1ca1
+  requires_python: '>=3.9'
 - pypi: https://files.pythonhosted.org/packages/b2/a3/e137168c9c44d18eff0376253da9f1e9234d0239e0ee230d2fee6cea8e55/jeepney-0.9.0-py3-none-any.whl
   name: jeepney
   version: 0.9.0
