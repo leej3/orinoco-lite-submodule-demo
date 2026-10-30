@@ -58,3 +58,5 @@ header_layout = "hybrid"
 
 [tool.orinoco.operations]
 template_updates = true
+shacl_materialization = true
+preview_editing = true
