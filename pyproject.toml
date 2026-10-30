@@ -60,3 +60,6 @@ header_layout = "hybrid"
 template_updates = true
 shacl_materialization = true
 preview_editing = true
+
+[tool.orinoco.service]
+url = "https://orinoco-issue-249-test.pages.dev"
