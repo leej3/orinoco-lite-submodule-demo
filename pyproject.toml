@@ -58,6 +58,3 @@ header_layout = "hybrid"
 
 [tool.orinoco.operations]
 template_updates = true
-
-[tool.orinoco.service]
-url = "https://orinoco-issue-249-test.pages.dev"
