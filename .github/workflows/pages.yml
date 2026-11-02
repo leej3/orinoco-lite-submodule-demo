@@ -1,4 +1,4 @@
-name: Publish authentication test Pages
+name: Publish repository editor test Pages
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         with:
           persist-credentials: false
       # Preserve the existing public website while its metadata is private.
-      # This fixture tests authentication, not the unfinished website build.
+      # Replace only its editor shell to exercise the retained deployed snapshot.
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           name: github-pages
@@ -34,18 +34,30 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: ORINOCO-Lite/orinoco-lite-dev
-          ref: ebcebda61b7a9382fe83b5c7dcaec86774c27cc3
+          ref: 5960445d02d1a57d6b8731e6c51ad25b0c94864b
           path: auth-package
+          submodules: recursive
           persist-credentials: false
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+      - uses: prefix-dev/setup-pixi@f00437f565399d418b0acc85936d12c1fb668347
         with:
-          node-version: "22.23.2"
-      - name: Build the disposable authentication probe
-        env:
-          ORINOCO_PROBE_SOURCE: ${{ github.sha }}
+          manifest-path: auth-package/pixi.toml
+          locked: false
+      - name: Build the real editor from the selected package
+        run: pixi run --manifest-path auth-package/pixi.toml orinoco-lite dev prepare-resources
+      - name: Use the editor with the already-published record snapshot
+        shell: python
         run: |
-          npm ci --prefix auth-package/packages/curation-review-app
-          npm exec --prefix auth-package/packages/curation-review-app -- vite build --config "$GITHUB_WORKSPACE/probe/vite.config.mjs"
+          import json, shutil
+          from pathlib import Path
+          editor = Path('build/pages/edit')
+          shell = Path('auth-package/src/orinoco_lite/_resources/editor-shell')
+          shutil.copytree(shell, editor, dirs_exist_ok=True)
+          config = json.loads((editor / 'config.json').read_text())
+          catalog = json.loads((editor / 'data/record-sources.json').read_text())
+          config['review_bundle_proposal']['source_commit'] = catalog['source_commit']
+          config['review_bundle_proposal']['service_origin'] = 'https://orinoco-issue-249-test.pages.dev'
+          config['front_page_content'] = 'Edit the published fixture, then submit it for processing by repository workflows.'
+          (editor / 'config.json').write_text(json.dumps(config))
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         with:
           path: build/pages
