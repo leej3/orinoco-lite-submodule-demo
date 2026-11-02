@@ -26,13 +26,13 @@ button.addEventListener('click', async () => {
         artifactResult = archive.ok ? `Artifact download: ${(await archive.arrayBuffer()).byteLength} bytes.` : `Artifact download HTTP ${archive.status}.`;
       } catch { artifactResult = 'Artifact download blocked by browser transport; investigate CORS.'; }
     }
-    status.textContent = 'Uploading the fixture directly to the metadata repository…';
+    status.textContent = `Signed in as ${login}.\n${artifactResult}\nUploading the fixture directly to the metadata repository…`;
     const result = await uploadSubmission({ format: 'orinoco-authentication-probe', version: 1, source_commit: __SOURCE__, fixture: 'fixture-data-'.repeat(100000) }, access, authentication);
     link.href = result.workflow_url;
     link.hidden = false;
     status.textContent = `Signed in as ${login}.\nRepository scopes: ${access.scope.repositories.map((repo) => repo.name).join(', ')}\nToken expiries: ${Object.values(access.credentials).map((credential) => credential.expires_at).join(', ')}\n${artifactResult}\nUploaded input: ${result.input_commit}\nInput repository: ${result.repository}\nWorkflow dispatched. Browser tokens will be revoked now.`;
   } catch (error) {
-    status.textContent = error instanceof Error ? error.message : 'The authentication test failed.';
+    status.textContent += `\nFailure: ${error instanceof Error ? error.message : 'The authentication test failed.'}`;
   } finally {
     await authentication.release().catch(() => undefined);
     button.disabled = false;
