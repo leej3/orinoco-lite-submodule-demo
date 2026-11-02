@@ -2,6 +2,6 @@
   "app_name": "Orinoco Lite submodule demo source metadata review",
   "format": "orinoco-curation-review-config",
   "repository": "leej3/orinoco-lite-submodule-demo",
-  "service_origin": "https://orinoco-curation-review.pages.dev",
+  "service_origin": "https://orinoco-issue-249-test.pages.dev",
   "version": 1
 }

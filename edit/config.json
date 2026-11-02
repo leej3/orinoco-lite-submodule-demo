@@ -18,7 +18,7 @@
   "review_bundle_proposal": {
     "install_url": "https://github.com/apps/orinoco-lite-curation-review/installations/new",
     "repository": "leej3/orinoco-lite-submodule-demo",
-    "service_origin": "https://orinoco-curation-review.pages.dev",
+    "service_origin": "https://orinoco-issue-249-test.pages.dev",
     "setup_url": "https://github.com/ORINOCO-Lite/orinoco-lite-dev/blob/main/packages/curation-review-app/README.md#fix-github-authorization",
     "shared_github_pages_origin": true
   },
