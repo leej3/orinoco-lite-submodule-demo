@@ -33,7 +33,8 @@ jobs:
           def request(url, token, body=None, method=None):
               req = urllib.request.Request(url, data=None if body is None else json.dumps(body).encode(),
                   method=method, headers={'Authorization': 'Bearer ' + token,
-                  'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json'})
+                  'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json',
+                  'User-Agent': 'orinoco-lite-workflow-authentication'})
               with opener.open(req) as response:
                   data = response.read()
               return json.loads(data) if data else None
