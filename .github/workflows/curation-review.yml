@@ -34,14 +34,20 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
+          submodules: recursive
           fetch-depth: 0
           persist-credentials: false
 
       - name: Install the trusted locked environment
         uses: prefix-dev/setup-pixi@f00437f565399d418b0acc85936d12c1fb668347 # v0.10.1
         with:
-          frozen: true
-          cache: true
+          activate-environment: true
+          locked: false
+          cache: false
+
+      - name: Prepare editable package resources
+        if: ${{ hashFiles('.orinoco-lite/orinoco-lite-dev/pixi.toml') != '' }}
+        run: pixi run --manifest-path .orinoco-lite/orinoco-lite-dev/pixi.toml orinoco-lite dev prepare-resources
 
       # The App grants repository write access only after this step succeeds.
       - name: Validate and record the composed adapter result
@@ -53,7 +59,7 @@ jobs:
         id: publish
         run: pixi run orinoco-lite curation publish
 
-      - name: Upload review presentation
+      - name: Upload review artifact
         if: steps.publish.outputs.review_artifact != ''
         id: review
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2

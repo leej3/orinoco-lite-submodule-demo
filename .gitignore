@@ -1,9 +1,8 @@
 .DS_Store
 .pixi/
-.orinoco/
+pixi.lock
 .orinoco-lite/state/
 build/
-generated/
 .netlify/
 node_modules/
 test-results/

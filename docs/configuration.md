@@ -2,6 +2,9 @@
 
 Edit root `pyproject.toml` for runtime settings under `[tool.orinoco]`.
 `site.identity`, `site.navigation`, and `site.appearance` control the public website.
+Omit `site.navigation` to use the template menu.
+An explicit list replaces the standard links; `navigation = []` leaves only Search.
+Omitted appearance settings use the template defaults.
 Keep environment dependencies, package selections, and tasks in `pixi.toml`.
 Copier answers record generation choices; the root manifest is authoritative afterward and template updates preserve it.
 
@@ -10,13 +13,12 @@ Add or edit this table on your repository's default branch, enabling only the op
 
 ```toml
 [tool.orinoco.operations]
-shacl_materialization = false
 automated_curation = false
 template_updates = false
-preview_editing = false
 ```
 
-These allow editor proposal materialization, automated curation completion, template-update proposals, and editing from verified development previews, respectively.
+These allow automated curation completion and template-update proposals.
+Editor proposals and verified preview editing use the installed App and the curator’s GitHub permissions.
 Missing choices remain disabled.
 See the [operation and permission specification](https://github.com/ORINOCO-Lite/orinoco-lite-dev/blob/main/docs/agents/contract/curation-service-authentication-options.md#functionality-and-permissions) for required permissions and their purpose.
 The service reads these choices from the current default branch; proposed changes cannot authorize themselves.

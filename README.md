@@ -2,13 +2,17 @@
 
 This is an Orinoco Lite metadata-driven website.
 Set its public identity in `pyproject.toml` under `[tool.orinoco.site]`.
-The starter records and `/explore` page build and preview immediately; replace them with reviewed site metadata and editorial content before publishing.
-Orinoco Lite resolves its pinned www-from-model checkout and composes it with this scaffold's small `.orinoco-lite/hugo-adapter/` adapter, its bounded `.orinoco-lite/materialized-hugo-assets/upstream/` asset overlay, and the repository's declarative `site-specific/` inputs.
+The starter records build immediately; replace them with your own metadata to populate the site.
+Custom pages and layouts are optional.
+The package supplies reusable rendering functionality and required upstream assets; the template supplies the scaffold and Orinoco adaptations.
+Your records, pages, and media remain site-owned.
 
 ```console
 pixi run build
 pixi run serve
 ```
+
+Build outputs stay under `build/`: `hugo-projection/` contains metadata-derived Hugo inputs, `hugo-assembly/` contains the complete Hugo source tree, and `site/` contains the rendered website.
 
 The source boundary is:
 
@@ -21,6 +25,6 @@ The source boundary is:
 
 See [getting started](docs/getting-started.md), [ownership](docs/ownership.md), and [custom-domain setup](docs/custom-domain.md). Pull requests also get a disposable Netlify rendering; see [pull-request previews](docs/pr-previews.md).
 
-The selected package revision is the single authority for the upstream website and theme pins.
-The downstream selects its package through Pixi, its template through `.copier-answers.yml`, and actions through pinned workflow references.
-Resources and specifications required to build or operate Orinoco Lite are internal to the selected package commit.
+Package versions are selected through Pixi and template versions through `.copier-answers.yml`.
+The template’s [minimum package requirement](.orinoco-lite/README.md#package-compatibility) is separate from that exact selection.
+See [template updates](docs/template-updates.md) for the supported update commands.
