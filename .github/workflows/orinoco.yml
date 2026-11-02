@@ -1,0 +1,12 @@
+name: Process submitted edits
+on:
+  repository_dispatch:
+    types: [orinoco-submission]
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  process:
+    uses: leej3/orinoco-lite-submodule-demo/.github/workflows/auth-probe.yml@39b1224996d39d519e3a080f8c89803ef7ec3089
+    with:
+      submission: ${{ github.event.client_payload.submission }}

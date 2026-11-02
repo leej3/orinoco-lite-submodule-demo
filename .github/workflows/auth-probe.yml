@@ -1,0 +1,64 @@
+name: Exercise submission credentials
+on:
+  workflow_call:
+    inputs:
+      submission:
+        required: true
+        type: string
+permissions: {}
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Verify delegated credentials without changing proposals
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SUBMISSION: ${{ inputs.submission }}
+          REPOSITORY: ${{ github.repository }}
+        shell: python
+        run: |
+          import base64, json, os, re, urllib.request, urllib.parse
+          branch = os.environ['SUBMISSION']
+          assert re.fullmatch(r'orinoco/submissions/[0-9a-f]{64}', branch)
+          repository = os.environ['REPOSITORY']
+          origin = 'https://orinoco-issue-249-test.pages.dev'
+          endpoint = origin + '/api/auth/workflow-credentials'
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, *args):
+                  return None
+          opener = urllib.request.build_opener(NoRedirect)
+          def request(url, token, body=None, method=None):
+              req = urllib.request.Request(url, data=None if body is None else json.dumps(body).encode(),
+                  method=method, headers={'Authorization': 'Bearer ' + token,
+                  'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json',
+                  'User-Agent': 'orinoco-lite-workflow-authentication'})
+              with opener.open(req) as response:
+                  data = response.read()
+              return json.loads(data) if data else None
+          encoded_branch = urllib.parse.quote(branch, safe='')
+          receipt_file = request('https://api.github.com/repos/' + repository + '/contents/.orinoco-lite/submission-authorization.json?ref=' + encoded_branch, os.environ['GH_TOKEN'])
+          receipt = json.loads(base64.b64decode(receipt_file['content']))
+          oidc_url = os.environ['ACTIONS_ID_TOKEN_REQUEST_URL'] + '&audience=' + urllib.parse.quote(endpoint, safe='')
+          oidc = request(oidc_url, os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN'])['value']
+          response = request(endpoint, oidc, {'authorization': receipt['authorization']})
+          credentials = response['credentials']
+          for credential in credentials.values():
+              print('::add-mask::' + credential['token'])
+          try:
+              authorized = response['authorization']
+              assert authorized['input_commit'] == receipt['input_commit']
+              assert authorized['input_repository'] == receipt['input_repository']
+              for selected in authorized['scope']['repositories']:
+                  token = credentials[selected['name']]['token']
+                  actual = request('https://api.github.com/repos/' + selected['name'], token)
+                  assert actual['id'] == selected['id']
+                  print('Verified repository credential:', selected['name'], 'private=' + str(actual['private']))
+              print('Authorized submitter:', authorized['submitter']['login'])
+              print('Authorized input:', authorized['input_commit'])
+          finally:
+              for credential in credentials.values():
+                  request('https://api.github.com/installation/token', credential['token'], method='DELETE')
+          print('Delegated credentials verified and revoked; no proposal writes performed.')
