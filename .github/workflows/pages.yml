@@ -50,6 +50,21 @@ jobs:
           ORINOCO_BASE_URL: ${{ steps.pages.outputs.base_url }}
         run: |
           pixi run build-pages
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: ORINOCO-Lite/orinoco-lite-dev
+          ref: 56e74e1412dc916eff55edcf7de8d72cced7ca64
+          path: auth-package
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: "22.23.2"
+      - name: Build the disposable authentication probe
+        env:
+          ORINOCO_PROBE_SOURCE: ${{ steps.source.outputs.sha }}
+        run: |
+          npm ci --prefix auth-package/packages/curation-review-app
+          npm exec --prefix auth-package/packages/curation-review-app -- vite build --config "$GITHUB_WORKSPACE/probe/vite.config.mjs"
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: build/pages
